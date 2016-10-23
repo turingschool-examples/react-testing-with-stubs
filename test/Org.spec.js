@@ -38,7 +38,6 @@ describe('<Org />', () => {
       const wrapper = mount(<Org />)
       server.respond()
       expect(wrapper.find(RepoCard).length).to.equal(2)
-      server.restore();
     })
   })
 })
