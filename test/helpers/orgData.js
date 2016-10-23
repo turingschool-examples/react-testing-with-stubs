@@ -1,1 +1,1 @@
-module.exports = [{name: '', html_url: ''}, {name: '', html_url: ''}]
+module.exports = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
