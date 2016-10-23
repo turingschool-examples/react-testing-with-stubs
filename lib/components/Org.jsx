@@ -9,22 +9,23 @@ export default class Org extends Component {
     this.state = {
       name: 'turingschool',
       source: 'https://api.github.com/orgs/turingschool/repos',
-      data: (this.props.orgData || [])
+      data: []
     }
   }
 
   componentDidMount() {
-    if(!this.state.data.length) {
-      this.serverRequest = $.get(this.state.source, function(result){
-        this.setState({data: result})
-      }.bind(this))
-    }
+    if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
+    this.getOrgData()
+  }
+
+  getOrgData(){
+    this.serverRequest = $.get(this.state.source, function(result){
+      this.setState({data: result})
+    }.bind(this))
   }
 
   componentWillUnmount() {
-    if (this.serverRequest){
-      this.serverRequest.abort();
-    }
+    this.serverRequest.abort();
   }
 
   render() {

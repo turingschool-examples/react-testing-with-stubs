@@ -16,7 +16,7 @@ describe('<Org />', () => {
 
   context('testing ajax calls - the easy way', () => {
     it('should repoCard components for organizational data', () => {
-      const wrapper = shallow(<Org orgData={orgData} />)
+      const wrapper = mount(<Org orgData={orgData} />)
       expect(wrapper.find(RepoCard).length).to.equal(2)
     }) 
   })
