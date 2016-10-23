@@ -9,7 +9,9 @@
   "scripts": {
     "start": "webpack-dev-server --devtool",
     "build": "webpack",
-    "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
+    "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive",
+    "coverage": "nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test",
+    "vcoverage": "open coverage/index.html"
   },
   "repository": {
     "type": "git",
@@ -45,6 +47,7 @@
     "mocha-loader": "^1.0.0",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.10.0",
+    "nyc": "^8.3.2",
     "react": "^15.3.1",
     "react-addons-test-utils": "^15.3.1",
     "react-dom": "^15.3.1",
