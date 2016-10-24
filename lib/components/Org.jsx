@@ -14,29 +14,19 @@ export default class Org extends Component {
   }
 
   componentDidMount() {
-    if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
-    this.getOrgData()
+
   }
 
   getOrgData(){
-    this.serverRequest = $.get(this.state.source, function(result){
-      this.setState({data: result})
-    }.bind(this))
+
   }
 
   componentWillUnmount() {
-    this.serverRequest.abort();
   }
 
   render() {
     return (
       <div>
-        Repos owned by {this.state.name}
-        {this.state.data
-          .map((repo, index) => (
-            <RepoCard key={index} {...repo} />
-          ))
-        }
       </div>
     )
   }
