@@ -15,7 +15,7 @@ describe('<Org />', () => {
   })
 
   context('testing ajax calls - the easy way', () => {
-    it.skip('should display repoCard components for organizational data', () => {
+    it('should display repoCard components for organizational data', () => {
     }) 
   })
 
