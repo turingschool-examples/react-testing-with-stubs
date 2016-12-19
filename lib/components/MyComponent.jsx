@@ -3,6 +3,10 @@ import Foo from './Foo'
 
 
 export default class MyComponent extends Component {
+  componentDidMount(){
+
+  }
+
   render() {
     return (
       <div>
