@@ -14,11 +14,6 @@ export default class Org extends Component {
   }
 
   componentDidMount() {
-    if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
-    this.getOrgData()
-  }
-
-  getOrgData(){
     this.serverRequest = $.get(this.state.source, function(result){
       this.setState({data: result})
     }.bind(this))
