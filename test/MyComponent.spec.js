@@ -36,8 +36,8 @@ describe('<MyComponent />', () => {
   });
 
   it('calls componentDidMount', () => {
-    sinon.spy(Foo.prototype, 'componentDidMount');
-    const wrapper = mount(<Foo />);
-    expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);
+    sinon.spy(MyComponent.prototype, 'componentDidMount');
+    const wrapper = mount(<MyComponent />);
+    expect(MyComponent.prototype.componentDidMount.calledOnce).to.equal(true);
   });
 });
