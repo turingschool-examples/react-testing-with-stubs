@@ -8,7 +8,7 @@ import RepoCard from '../lib/components/RepoCard'
 
 import orgData from './helpers/orgData'
 
-describe('<Org />', () => {
+describe.skip('<Org />', () => {
   it('should render the org name', () => {
     const wrapper = shallow(<Org />)
     expect(wrapper.contains('turingschool')).to.be.true

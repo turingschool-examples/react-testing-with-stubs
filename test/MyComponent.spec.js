@@ -34,4 +34,10 @@ describe('<MyComponent />', () => {
     wrapper.find('button').simulate('click');
     expect(onButtonClick).to.have.property('callCount', 1);
   });
+
+  it('calls componentDidMount', () => {
+    sinon.spy(Foo.prototype, 'componentDidMount');
+    const wrapper = mount(<Foo />);
+    expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);
+  });
 });
