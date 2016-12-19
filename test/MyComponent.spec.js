@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
+import { expect } from 'chai'
 
 import MyComponent from '../lib/components/MyComponent';
 import Foo from '../lib/components/Foo';
